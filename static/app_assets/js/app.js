@@ -65,7 +65,7 @@ function validateForm(step) {
     let subForm = document.querySelectorAll('.step')[step];
     let flag = true;
 
-    // for radio button input (consent form)
+    // for radio button input (consent form) validation
     if (subForm.querySelector('input[type=radio]') != null) {
         if (subForm.querySelector("input[type=radio]").checked !== true) {
             alert("Please, agree with the terms.");
@@ -89,14 +89,13 @@ function validateForm(step) {
     if (subForm.querySelector('input[type=checkbox]') != null) {
         let check = false;
         subForm.querySelectorAll('input[type=checkbox]').forEach((item, index) => {
-            // None can't be checked with others -> implementing other function for this
             // Can't skip the process -- show alert if user tries to do so
             if (item.checked === true)
                 check = true;
         });
 
         if (!check) {
-            alert("Please check atleast one value.")
+            alert("Please check atleast one value.");
             flag = false;
         }
     }
@@ -127,7 +126,6 @@ async function fetchResult(e) {
 
         fd.append("cough_data", cough_audio, "coughFile.wav");
 
-        // 	//$('#'+btn).prop('disabled', true);	
         $.ajax({
             type: "POST",
             url: 'https://reliefme.azurewebsites.net/data',

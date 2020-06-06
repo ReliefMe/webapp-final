@@ -56,3 +56,25 @@ header img {
     margin: 0;
     margin-left: 10px;
 }
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#controls button,
+#controls span {
+    margin: 0 5px;
+}
+
+/* recording bulb */
+.bulb {
+    animation-iteration-count: infinite;
+    background-color: red;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}

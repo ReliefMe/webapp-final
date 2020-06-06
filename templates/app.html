@@ -7,6 +7,7 @@
     <title>ReliefMe | App</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="static/app_assets/css/style.css">
 
 </head>
@@ -35,30 +36,32 @@
             </div>
 
             <!--1-->
-            <div class="step form-group">
-                <h4><label for="age">How old are you?</label></h4>
-                <input type="number" name="age" id="age" class="ml-2 form-control form-control-lg" value="">
-            </div>
+            <div class="step">
+                <div class="form-group">
+                    <h4><label for="age">How old are you?</label></h4>
+                    <input type="number" name="age" id="age" class="ml-2 form-control form-control-lg" value="">
+                </div>
 
-            <!--2-->
-            <div class="step form-group">
-                <h4><label for="gender">Please mention your gender:</label></h4>
-                <select name="gender" id="gender" class="ml-2 custom-select custom-select-lg">
-                    <option value="" selected disabled>Select</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
+                <!--2-->
+                <div class="form-group">
+                    <h4><label for="gender">Please mention your gender:</label></h4>
+                    <select name="gender" id="gender" class="ml-2 custom-select custom-select-lg">
+                        <option value="" selected disabled>Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
 
-            <!--3-->
-            <div class="step form-group">
-                <h4><label for="smoker">Do you smoke?</label></h4>
-                <select name="smoker" id="smoker" class="ml-2 custom-select custom-select-lg">
-                    <option value="" selected disabled>Select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
+                <!--3-->
+                <div class="form-group">
+                    <h4><label for="smoker">Do you smoke?</label></h4>
+                    <select name="smoker" id="smoker" class="ml-2 custom-select custom-select-lg">
+                        <option value="" selected disabled>Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
             </div>
 
             <!--4-->
@@ -134,7 +137,8 @@
                 <div class="form-check">
                     <input type="checkbox" name="medical_history" id="mh4" class="form-check-input"
                         value="Disease or conditions that make it harder to cough">
-                    <label for="mh4" class="form-check-label">Disease or conditions that make it harder to cough</label>
+                    <label for="mh4" class="form-check-label">Disease or conditions that make it harder to
+                        cough</label>
                 </div>
                 <div class="form-check">
                     <input type="checkbox" name="medical_history" id="mh5" class="form-check-input"
@@ -158,8 +162,9 @@
             <div class="step form-group form-check-group">
                 <h3>Please record your Cough.</h3>
                 <div id="controls">
-                    <button id="recordButton" class="btn btn-success">Record</button>
-                    <button id="stopButton" class="btn btn-danger" disabled>Stop</button>
+                    <button id="recordButton" class="btn btn-success btn-lg">Record</button>
+                    <button id="stopButton" class="btn btn-danger btn-lg" disabled>Stop</button>
+                    <span class="bulb animate__animated animate__fadeIn"></span>
                 </div>
                 <div id="formats">Format: start recording to see sample rate</div>
                 <p><strong>Recordings:</strong></p>
